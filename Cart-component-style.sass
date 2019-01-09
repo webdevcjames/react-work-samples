@@ -1,0 +1,75 @@
+.cart-items
+  .results-table-headers
+    background-color: material-color( "blue-grey", "50" )
+    color: material-color( "blue-grey", "600" )
+
+  th:last-child, td:last-child
+    padding-right: 48px
+    text-align: right
+
+  th:first-child, td:first-child
+    padding-left: 48px
+    text-align: left
+
+  th:nth-child(3), td:nth-child(3), th:nth-child(4), td:nth-child(4) 
+    text-align: center 
+
+  &.read-only
+    th:first-child, td:first-child
+      text-align: left
+
+    th:nth-child(3), td:nth-child(3)
+      text-align: left
+
+    th:nth-child(4), td:nth-child(4) 
+      text-align: right
+ 
+  .search
+    margin: 0
+
+  .search-input-el
+    +border-radius( 0 )
+    border: none
+    font-size: 14px
+    height: 31px
+    padding: 8px 0 9px
+
+  .search-results
+    margin-top: 8px
+
+  .result-item
+    margin: 8px 0
+
+  .button
+    padding: 4px
+
+.cart-item-input
+  @extend %inner-field-width
+  @extend %base-field-element
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    +appearance( none )
+    margin: 0
+
+  -moz-appearance: textfield
+  height: 32px
+  padding: 7px 14px
+
+.error
+  &:before
+    content: none
+
+  .cart-item-input
+    border: 1px solid material-color( "blue-grey", "400" )
+
+  .results-table-headers
+    background-color: material-color( "red", "a400" )
+    color: #ffffff
+
+  .add-cart-item td
+    padding-bottom: 12px
+
+.field-error
+  .cart &
+    left: 48px
+    bottom: 4px
